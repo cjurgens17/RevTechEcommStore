@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<app-search-product class="searchbar" (termTextChanged)="onSearchTextEntered($event)"></app-search-product>
+<div class="container">
+    <div class="row align-items-start">
+       <div class="col" *ngFor="let product of allProducts">
+            <app-product-card *ngIf="searchText === '' || product.name.toLowerCase().includes(searchText) "
+                class="cardListItem"
+                [productInfo]="product"
+            ></app-product-card> 
+        </div> 
+    </div>
+</div>

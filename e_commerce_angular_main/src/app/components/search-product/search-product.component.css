@@ -1,0 +1,15 @@
+input[type="text"] {
+  display: block;
+  width: calc(100% - 24px); /*20px [ left & Right ] padding + 4px border [ left & Right ] */ 
+  font-size: 18px;
+  font-weight: 600;
+  color: #0c0d0e;
+  padding: 10px;
+  border: 2px solid #82898a;
+}
+  
+  .searchbar {
+    max-width: 600px;
+    margin: 50px auto;
+  }
+  

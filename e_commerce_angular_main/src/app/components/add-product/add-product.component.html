@@ -1,0 +1,51 @@
+<img class="img-center" src="../../../assets/images/rev-logo.png" width="30%" height="30%" alt="Revature">
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title></title>
+   <link rel="stylesheet" href="add-product.component.css">
+ </head>
+ <body>
+   <div class="center">
+     <h1>Add A Product</h1>
+     <form id="new-product-form" [formGroup]="newProductForm">
+       <div class="new-product-form-group">
+         <input type="number" class="form-control" formControlName="quantity" id="inputQuantity" placeholder="Enter Quantity in Inventory">
+         <span></span>
+         <label for="inputQuantity">Quantity</label>
+       </div>
+       <div class="new-product-form-group">
+         <input type="number" class="form-control" formControlName="price" id="inputPrice" placeholder="Enter Price of New Product">
+         <span></span>
+         <label for="inputPrice">Price</label>
+       </div>
+       <div class="new-product-form-group">
+         <input type="text" class="form-control" formControlName="description" id="inputDescription" placeholder="Enter Description of New Product">          <span></span>
+         <label for="inputDescription">Description</label>
+       </div>
+       <div class="new-product-form-group">
+         <input type="text" class="form-control" formControlName="image" id="inputImageUrl" placeholder="Enter URL for Display Image">
+         <span></span>
+         <label for="inputImageUrl">Image URL</label>
+       </div>
+       <div class="new-product-form-group">
+         <input type="text" class="form-control" formControlName="name" id="inputName" placeholder="Enter Name of New Product">
+         <span></span>
+         <label for="inputName">Name of Product</label>
+       </div>
+       <div class="new-product-form-group">
+         <input type="text" class="form-control" formControlName="more_details" id="inputMoreDetails" placeholder="Enter More Details for New Product">
+         <span></span>
+         <label for="inputMoreDetails">More Details on Product</label>
+       </div>
+       <div class="signup_link">
+         <button class="addproductbtn" (click)="onProductSubmit()">Register Product</button>
+       </div>
+     </form>
+   </div>
+ 
+ </body>
+</html>
+ 
+ 
+

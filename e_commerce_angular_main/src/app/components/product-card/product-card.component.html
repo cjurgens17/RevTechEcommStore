@@ -1,0 +1,31 @@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="productInfo.image" alt="Card image cap"  (click)="openDialog()">
+    <div class="card-body">
+      <h5 class="card-title">{{productInfo.name}}</h5>
+      <p class="card-text">{{productInfo.description}}</p>
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">$</span>
+      </div>
+      <input type="number" class="form-control" aria-label="Sizing example input" [value]="productInfo.price" aria-describedby="inputGroup-sizing-sm" disabled>
+    </div>
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Quantity in Stock</span>
+        </div>
+        <input type="number" class="form-control" aria-label="Sizing example input" [value]="productInfo.quantity" aria-describedby="inputGroup-sizing-sm" disabled>
+      </div>
+
+      <div class="cart-btn">
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Add Qty => Cart</span>
+        </div>
+        <input type="number" class="form-control" aria-label="Sizing example input" [(ngModel)]="itemqty"  aria-describedby="inputGroup-sizing-sm" min="1" max="{{productInfo.quantity}}" placeholder="0" enabled>
+      </div>
+      </div>
+    <div class="card-body">
+        <button *ngIf="(itemqty <= productInfo.quantity) && (itemqty > 0)"  class="btn btn-outline-success" (click)="addToCart(productInfo)">Add to Cart</button>
+    </div>
+  </div>
